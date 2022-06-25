@@ -38,7 +38,7 @@
 # # load model
 # --load checkpoint_0_epoch.pt \
 
-python main.py \
+python3 main.py \
 --train --predict \
 --batch 128 \
 --epoch 10 \

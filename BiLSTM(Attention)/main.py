@@ -278,6 +278,8 @@ def predict(args,data,model,tokenizer):
     data[['id','target']].to_csv(DATA_PATH + args.data_dir +'/result.csv',index=None)
 
 MODEL_PATH = './models/'
+if not os.path.exists(MODEL_PATH):
+    os.makedirs(MODEL_PATH)
 DATA_PATH = './data/'
 TRAIN_DATA = DATA_PATH + args.data_dir + '/train_data.csv'
 TEST_DATA = DATA_PATH + args.data_dir + '/test_data.csv'
